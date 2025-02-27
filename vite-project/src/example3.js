@@ -3,13 +3,13 @@
 // 클래스와 상속
 
 /**
- * 기본적으로 JS(ES6)에서의 클래스의 정의 Java와 유사합니다.
+ * 기본적으로 JS(ES6)에서의 클래스의 정의 Java와 유사합니다. 
  * 클래스 정의 방식
  */
 class Person {
-  constructor(firstName, lastname) {
+  constructor(firstName, lastName) {
     this.firstName = firstName;
-    this.lastname = lastname;
+    this.lastName = lastName;
   }
 }
 /**
@@ -18,11 +18,9 @@ class Person {
 
 class Employee extends Person {
   // 생성자 명령어
-  constructor(firstName, lastname, salary) {
+  constructor(firstName, lastName, salary) {
     // 부모 클래스의 생성자 불러오는 키워드 super()
-    super(firstName, lastname);
+    super(firstName, lastName);
     this.salary = salary;
-  }  
+  }
 }
-
-Employee();

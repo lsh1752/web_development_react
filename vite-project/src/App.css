@@ -40,3 +40,24 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-color: #5f5f5f;
+}
+
+#style1 {
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: gray;
+}
+
+input {
+  border-radius: 10px;
+}
