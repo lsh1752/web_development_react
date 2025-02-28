@@ -4,14 +4,17 @@ import './App.css';
 
 function Counter() {
   const [ count, setCount ] = useState(0);
-  useTitle(`당신은 ${count}번 클릭했습니다!`)
+  useTitle(`쓸대없이 누른 횟수 ${count}`)
 
   const handleClick = () => setCount((preCount) => preCount + 1);
 
   return(
     <>
+      <div id="style2">
+        <p>!카운터!</p>
+      </div>
       <div id="style1">
-        <p>{count}</p>
+        <p>타이틀을 보시오</p>
         <button onClick={handleClick}>증가</button>
       </div>
     </>
