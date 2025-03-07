@@ -1,3 +1,7 @@
+import { AgGridReact } from 'ag-grid-react';
+import 'ag-grid-community/styles/ag-grid.css'
+import 'ag-grid-community/styles/ag-theme-material.css'
+import { ColDef } from 'ag-grid-community';
 import { useState } from 'react'
 import axios from 'axios'
 import './App.css'
@@ -18,32 +22,29 @@ function App() {
     .catch(err => console.log(err))
   }
 
+  const [columnDefs] = useState<ColDef[]>([
+    {field: 'id'},
+    {field: 'full_name'},
+    {field: 'html_url'},
+  ]);
 
   return (
-    <div id='style1'>
+    <>
       <input
         value={keyword}
         onChange={e => setKeyword(e.target.value)}
       />
-      <button onClick={handleClick}>Fetch button</button>
-      {repodata.length === 0 ? (
-        <p>접근 가능한 데이터가 없습니다</p>
-      ):(
-        <table>
-          <tbody>
-            {repodata.map(repo => (
-              <tr key={repo.id}>
-                <td>{repo.full_name}</td>
-                <td>
-                  <a href={repo.html_url}>{repo.html_url}</a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )} 
-    </div>
-  )
+
+      <button onClick={handleClick}>Search</button>
+      <div className="ag-theme-material"
+        style={{height: 500, width: 850}}>
+          <AgGridReact
+            rowData={repodata}
+            columnDefs={columnDefs}
+          />
+        </div>
+    </>
+  );
 }
 
 export default App
