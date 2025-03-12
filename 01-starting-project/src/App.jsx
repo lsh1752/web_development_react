@@ -5,7 +5,7 @@ import reactImgComponent from './assets/components.png';
 import reactImgConfig from './assets/config.png';
 import reactImgJsxUi from './assets/jsx-ui.png';
 import reactImgState from './assets/State-mgmt.png';
-import CORE_CONCEPTS from './data.js'
+import Core_Concepts from './data.js'
 
 // const reactDescriptionsKor = [ '근본적인', '결정적인', '핵심적인' ];
 // const reactDescriptionsEng = [ 'Fundamental', 'Crucial', 'Core' ];
@@ -51,7 +51,10 @@ function App() {
         <section id="core-concepts">
           <h2>핵심 개념들 of React</h2>
           <ul>
-            <CoreConcepts image={CORE_CONCEPTS.image} title={CORE_CONCEPTS.title} description={CORE_CONCEPTS.description}/>
+            <CoreConcepts image={Core_Concepts[0].image} title={Core_Concepts[0].title} description={Core_Concepts[0].description}/>
+            <CoreConcepts image={Core_Concepts[1].image} title={Core_Concepts[1].title} description={Core_Concepts[1].description}/>
+            <CoreConcepts image={Core_Concepts[2].image} title={Core_Concepts[2].title} description={Core_Concepts[2].description}/>
+            <CoreConcepts image={Core_Concepts[3].image} title={Core_Concepts[3].title} description={Core_Concepts[3].description}/>
           </ul>
         </section>
         <ul>
