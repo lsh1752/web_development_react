@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "./components/Header/Header2.jsx";
 // import 이미지변수명 from "경로";
 import reactImg from './assets/react-core-concepts.png';
@@ -11,14 +10,6 @@ import Core from "./components/CoreConcepts.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
-  
-  const [ selectredtopic, setSelectedTopic ] = useState('');
-
-  function handleSelect(selectredtopic) {
-    // selectedButton = 'commponent', 'jsx', 'props', 'state'
-    console.log(selectredtopic);
-  }
-
   return (
     <div>
       <Header />
@@ -35,12 +26,16 @@ function App() {
     <section id="examples">
       <h2>예시들</h2>
       <menu>
-        <TabButton onSelect={handleSelect('이잉이잉')}>Components</TabButton>
+        {/* <Tabbutton>Components</Tabbutton>
         <TabButton>JSX</TabButton>
         <TabButton>Props</TabButton>
-        <TabButton>State</TabButton>
+        <TabButton>State</TabButton> */}
+        <TabButton label='Components' />
+        <TabButton label='JSX' />
+        <TabButton label='Props' />
+        <TabButton label='State' />
       </menu>
-      {selectredtopic}
+      동적인 버튼 클릭의 결과물
     </section>
       </main>
     </div>
