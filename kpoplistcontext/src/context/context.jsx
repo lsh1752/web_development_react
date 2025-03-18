@@ -1,10 +1,9 @@
 // Context API 이용하기 위한 import
-import { Children } from "react";
 import { createContext, useState } from "react";
 
 const data = [
   {
-    title: "Psycho",
+    title: "드디어",
     artist: "Red Velvet",
     releaseDate: "2019.12.23",
     gender: "female",
@@ -16,13 +15,13 @@ const data = [
     gender: "female",
   },
   {
-    title: "Beatbox",
+    title: "오류",
     artist: "NCT DREAM",
     releaseDate: "2022.05.30",
     gender: "male",
   },
   {
-    title: "Attention",
+    title: "수정",
     artist: "NewJeans",
     releaseDate: "2022.08.01",
     gender: "female",
@@ -39,14 +38,14 @@ const data = [
 const KPopContext = createContext();
 
 // Provider 컴포넌트를 리턴하는 KPopContextProvider를 생성
-const KPopContextProvider = ({Children}) => {
-  const [playList, setPlayList] = useState(data);
+const KPopContextProvider = ({children}) => {
+  const [playlist, setPlaylist] = useState(data);
 
   return (
-    <KPopContextProvider value={{data, playList, setPlayList}}>
-      {Children}
-    </KPopContextProvider>
+    <KPopContext.Provider value={{data, playlist, setPlaylist}}>
+      {children}
+    </KPopContext.Provider>
   );
 }
 
-export {KPopContext, KPopContextProvider}
+export {KPopContext, KPopContextProvider};
