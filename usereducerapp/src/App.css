@@ -45,3 +45,29 @@ input {
   width: 100px;
   height: 30px;
 }
+
+.main {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#center {
+  border: 1px solid black;
+  width: 400px;
+  height: 200px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+#divstyle {
+  margin: 3px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#inputstyle {
+  width: 200px;
+  height: 30px;
+}
