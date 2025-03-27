@@ -1,10 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
+
+
 .home-container {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: white;
-  background-color: #000;
   min-height: 100vh;
   padding: 60px 5%;
   box-sizing: border-box;
+
+  line-height: 1.5;
+  background: radial-gradient(#280a48, #20043d);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 .home-loading {
@@ -58,3 +69,4 @@
   padding: 4px 8px;
   border-radius: 999px;
 }
+
